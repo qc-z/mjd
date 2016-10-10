@@ -1,0 +1,45 @@
+/*基本样式*/
+*,
+::before,
+::after {
+    margin:0;
+    padding:0;
+
+    /*把盒子模型变成怪异模式 即系盒子border和padding计算进去盒子的width*/
+    -webkit-box-sizing:border-box;
+    /*谷歌浏览器高亮*/
+    -webkit-tap-highlight-color:transparent;
+
+}
+body {
+    font-size:14px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color:#000;
+}
+a {
+    text-decoration:none;
+    color:#000;
+}
+ul {
+    list-style:none;
+}
+input,textarea {
+    border:none;
+    resize:none;
+    outline:none;
+    -webkit-appearance: none;
+}
+.clearfix::before,
+.clearfix::after {
+    content:"";
+    visibility:hidden;
+    height:0;
+    line-height:0;
+    clear:both;
+    display:block;
+}
+
+[class^="icon_"]{
+    background: url("../images/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}
